@@ -1,16 +1,16 @@
 import PropTypes from 'prop-types';
 import React, { useContext } from 'react';
-import { View } from 'react-native';
 import { Query } from 'react-apollo';
+import { View } from 'react-native';
 
-import { NetworkContext } from '../../NetworkProvider';
-import { SettingsContext } from '../../SettingsProvider';
 import { device, texts } from '../../config';
-import { Title, TitleContainer, TitleShadow } from '../Title';
-import { TextList } from '../TextList';
-import { getQuery, QUERY_TYPES } from '../../queries';
 import { graphqlFetchPolicy } from '../../helpers';
 import { useRefreshTime } from '../../hooks';
+import { NetworkContext } from '../../NetworkProvider';
+import { getQuery, QUERY_TYPES } from '../../queries';
+import { SettingsContext } from '../../SettingsProvider';
+import { TextList } from '../TextList';
+import { Title, TitleContainer, TitleShadow } from '../Title';
 
 export const About = ({ navigation, refreshing }) => {
   const { isConnected, isMainserverUp } = useContext(NetworkContext);

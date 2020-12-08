@@ -4,11 +4,12 @@ import { StyleSheet, View } from 'react-native';
 import Dropdown from 'react-native-modal-dropdown';
 
 import { colors, device, normalize } from '../config';
+import { arrowDown, arrowUp } from '../icons';
+
+import { Icon } from './Icon';
+import { Label } from './Label';
 import { RegularText } from './Text';
 import { Wrapper, WrapperRow, WrapperHorizontal } from './Wrapper';
-import { Icon } from './Icon';
-import { arrowDown, arrowUp } from '../icons';
-import { Label } from './Label';
 
 export const DropdownSelect = memo(({ data, setData, label }) => {
   if (!data || !data.length) return null;

@@ -1,16 +1,16 @@
+import _shuffle from 'lodash/shuffle';
 import PropTypes from 'prop-types';
 import React, { useContext } from 'react';
-import { ActivityIndicator } from 'react-native';
 import { Query } from 'react-apollo';
-import _shuffle from 'lodash/shuffle';
+import { ActivityIndicator } from 'react-native';
 
-import { NetworkContext } from '../../NetworkProvider';
 import { colors } from '../../config';
-import { ImagesCarousel } from '../ImagesCarousel';
-import { LoadingContainer } from '../LoadingContainer';
-import { getQuery, QUERY_TYPES } from '../../queries';
 import { graphqlFetchPolicy } from '../../helpers';
 import { useRefreshTime } from '../../hooks';
+import { NetworkContext } from '../../NetworkProvider';
+import { getQuery, QUERY_TYPES } from '../../queries';
+import { ImagesCarousel } from '../ImagesCarousel';
+import { LoadingContainer } from '../LoadingContainer';
 
 export const HomeCarousel = ({ navigation, refreshing }) => {
   const { isConnected, isMainserverUp } = useContext(NetworkContext);

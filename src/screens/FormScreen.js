@@ -1,5 +1,6 @@
 import PropTypes from 'prop-types';
 import React, { useContext, useState } from 'react';
+import { Mutation } from 'react-apollo';
 import {
   Alert,
   KeyboardAvoidingView,
@@ -10,15 +11,14 @@ import {
   View
 } from 'react-native';
 import { CheckBox } from 'react-native-elements';
-import { Mutation } from 'react-apollo';
 
-import { createQuery, QUERY_TYPES } from '../queries';
-import { colors, consts, device, normalize } from '../config';
 import { BoldText, Button, Icon, SafeAreaViewFlex, WrapperWithOrientation } from '../components';
-import { arrowLeft } from '../icons';
-import { OrientationContext } from '../OrientationProvider';
-import { getHeaderHeight, statusBarHeight } from '../navigation/CustomDrawerContentComponent';
+import { colors, consts, device, normalize } from '../config';
 import { useMatomoTrackScreenView } from '../hooks';
+import { arrowLeft } from '../icons';
+import { getHeaderHeight, statusBarHeight } from '../navigation/CustomDrawerContentComponent';
+import { OrientationContext } from '../OrientationProvider';
+import { createQuery, QUERY_TYPES } from '../queries';
 
 const { MATOMO_TRACKING } = consts;
 

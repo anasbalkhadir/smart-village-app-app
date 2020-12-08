@@ -1,5 +1,7 @@
+import _shuffle from 'lodash/shuffle';
 import PropTypes from 'prop-types';
 import React, { Fragment, useCallback, useContext, useEffect, useState } from 'react';
+import { Query } from 'react-apollo';
 import {
   ActivityIndicator,
   RefreshControl,
@@ -8,13 +10,8 @@ import {
   TouchableOpacity,
   View
 } from 'react-native';
-import { Query } from 'react-apollo';
-import _shuffle from 'lodash/shuffle';
 
-import { NetworkContext } from '../NetworkProvider';
-import { SettingsContext } from '../SettingsProvider';
 import { auth } from '../auth';
-import { colors, consts, device, normalize, texts } from '../config';
 import {
   About,
   Button,
@@ -32,6 +29,7 @@ import {
   Wrapper,
   WrapperRow
 } from '../components';
+import { colors, consts, device, normalize, texts } from '../config';
 import {
   graphqlFetchPolicy,
   parseEventRecords,
@@ -40,7 +38,9 @@ import {
   parseTours
 } from '../helpers';
 import { useMatomoAlertOnStartUp, useMatomoTrackScreenView, usePushNotifications } from '../hooks';
+import { NetworkContext } from '../NetworkProvider';
 import { getQuery, getQueryType, QUERY_TYPES } from '../queries';
+import { SettingsContext } from '../SettingsProvider';
 
 const { DRAWER, LIST_TYPES, MATOMO_TRACKING } = consts;
 

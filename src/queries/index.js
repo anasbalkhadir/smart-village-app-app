@@ -1,8 +1,7 @@
-// IMPORT TYPES
-import { QUERY_TYPES } from './types';
-
-// IMPORT GET QUERIES
+// IMPORT CREATE QUERIES
+import { CREATE_APP_USER_CONTENT } from './appUserContent';
 import { GET_CATEGORIES } from './categories';
+// IMPORT GET QUERIES
 import {
   GET_EVENT_RECORD,
   GET_EVENT_RECORDS,
@@ -10,13 +9,12 @@ import {
 } from './eventRecords';
 import { GET_NEWS_ITEM, GET_NEWS_ITEMS, GET_NEWS_ITEMS_AND_DATA_PROVIDERS } from './newsItems';
 import { GET_POINT_OF_INTEREST, GET_POINTS_OF_INTEREST } from './pointsOfInterest';
-import { GET_TOUR, GET_TOURS } from './tours';
 import { GET_POINTS_OF_INTEREST_AND_TOURS } from './pointsOfInterestAndTours';
 import { GET_PUBLIC_HTML_FILE } from './publicHtmlFiles';
 import { GET_PUBLIC_JSON_FILE } from './publicJsonFiles';
-
-// IMPORT CREATE QUERIES
-import { CREATE_APP_USER_CONTENT } from './appUserContent';
+import { GET_TOUR, GET_TOURS } from './tours';
+// IMPORT TYPES
+import { QUERY_TYPES } from './types';
 
 // EXPORT TYPES
 export * from './types';

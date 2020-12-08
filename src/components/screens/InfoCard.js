@@ -1,14 +1,14 @@
+import _filter from 'lodash/filter';
 import PropTypes from 'prop-types';
 import React from 'react';
 import { StyleSheet, TouchableOpacity, View } from 'react-native';
 import { Icon as RNEIcon } from 'react-native-elements';
-import _filter from 'lodash/filter';
 
 import { colors, normalize } from '../../config';
-import { mail, location, phone as phoneIcon, url as urlIcon } from '../../icons';
 import { openLink, locationLink, locationString } from '../../helpers';
-import { RegularText } from '../Text';
+import { mail, location, phone as phoneIcon, url as urlIcon } from '../../icons';
 import { Icon } from '../Icon';
+import { RegularText } from '../Text';
 import { InfoBox } from '../Wrapper';
 
 const addressOnPress = (address) => {

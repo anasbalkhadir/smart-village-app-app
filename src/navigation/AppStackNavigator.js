@@ -1,5 +1,6 @@
 import { createStackNavigator } from 'react-navigation';
 
+import { texts } from '../config';
 import {
   DetailScreen,
   HomeScreen,
@@ -8,9 +9,8 @@ import {
   SettingsScreen,
   WebScreen
 } from '../screens';
-import { defaultStackNavigatorConfig } from './defaultStackNavigatorConfig';
 
-import { texts } from '../config';
+import { defaultStackNavigatorConfig } from './defaultStackNavigatorConfig';
 
 const AppStackNavigator = (headerRight = true) =>
   createStackNavigator(

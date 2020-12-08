@@ -1,10 +1,11 @@
-import { Alert } from 'react-native';
-import * as Permissions from 'expo-permissions';
-import * as Notifications from 'expo-notifications';
 import Constants from 'expo-constants';
+import * as Notifications from 'expo-notifications';
+import * as Permissions from 'expo-permissions';
+import { Alert } from 'react-native';
 
-import { addToStore, readFromStore } from '../helpers';
 import { colors, device, texts } from '../config';
+import { addToStore, readFromStore } from '../helpers';
+
 import { handleIncomingToken, PushNotificationStorageKeys } from './TokenHandling';
 
 export const setInAppPermission = async (newValue: boolean) => {

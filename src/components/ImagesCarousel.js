@@ -1,15 +1,16 @@
 import PropTypes from 'prop-types';
-import Carousel from 'react-native-snap-carousel';
 import React, { useContext } from 'react';
-import { ActivityIndicator, StyleSheet, TouchableOpacity } from 'react-native';
 import { Query } from 'react-apollo';
+import { ActivityIndicator, StyleSheet, TouchableOpacity } from 'react-native';
+import Carousel from 'react-native-snap-carousel';
 
 import { colors } from '../config';
 import { imageHeight, shareMessage } from '../helpers';
+import { OrientationContext } from '../OrientationProvider';
 import { getQuery } from '../queries';
+
 import { Image } from './Image';
 import { LoadingContainer } from './LoadingContainer';
-import { OrientationContext } from '../OrientationProvider';
 
 const TouchableImage = ({ navigation, item, children }) => {
   const { routeName, params } = item.picture;

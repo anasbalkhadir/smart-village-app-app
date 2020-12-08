@@ -4,13 +4,13 @@ import { StyleSheet } from 'react-native';
 import { ListItem } from 'react-native-elements';
 
 import { colors, normalize } from '../config';
+import { trimNewLines } from '../helpers';
 import { arrowRight } from '../icons';
+
 import { Icon } from './Icon';
 import { Image } from './Image';
-
 import { RegularText, BoldText } from './Text';
 import { Touchable } from './Touchable';
-import { trimNewLines } from '../helpers';
 
 export const TextListItem = memo(({ navigation, item, noSubtitle, leftImage }) => {
   const { routeName, params, subtitle, title, bottomDivider, topDivider, picture } = item;

@@ -3,6 +3,7 @@ import React, { useEffect, useRef, useState } from 'react';
 
 import { texts } from '../config';
 import { QUERY_TYPES } from '../queries';
+
 import { DropdownSelect } from './DropdownSelect';
 import { Wrapper } from './Wrapper';
 

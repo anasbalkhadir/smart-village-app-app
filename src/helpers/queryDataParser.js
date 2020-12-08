@@ -1,6 +1,7 @@
 import _filter from 'lodash/filter';
 
 import { QUERY_TYPES } from '../queries';
+
 import { eventDate } from './dateTimeHelper';
 import { mainImageOfMediaContents } from './imageHelper';
 import { momentFormat } from './momentHelper';

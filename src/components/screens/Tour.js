@@ -1,21 +1,22 @@
+import _filter from 'lodash/filter';
 import PropTypes from 'prop-types';
 import React, { useContext } from 'react';
 import { View } from 'react-native';
-import _filter from 'lodash/filter';
 
 import { consts, device, texts } from '../../config';
+import { matomoTrackingString } from '../../helpers';
+import { useMatomoTrackScreenView } from '../../hooks';
+import { OrientationContext } from '../../OrientationProvider';
 import { HtmlView } from '../HtmlView';
 import { Image } from '../Image';
+import { ImagesCarousel } from '../ImagesCarousel';
 import { Logo } from '../Logo';
 import { Title, TitleContainer, TitleShadow } from '../Title';
 import { Wrapper, WrapperWithOrientation } from '../Wrapper';
+
 import { InfoCard } from './InfoCard';
-import { TourCard } from './TourCard';
 import { OperatingCompanyInfo } from './OperatingCompanyInfo';
-import { ImagesCarousel } from '../ImagesCarousel';
-import { OrientationContext } from '../../OrientationProvider';
-import { useMatomoTrackScreenView } from '../../hooks';
-import { matomoTrackingString } from '../../helpers';
+import { TourCard } from './TourCard';
 
 const { MATOMO_TRACKING } = consts;
 

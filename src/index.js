@@ -1,30 +1,30 @@
-import React, { useEffect, useState } from 'react';
-import { ActivityIndicator, AsyncStorage, StatusBar } from 'react-native';
-import * as SplashScreen from 'expo-splash-screen';
-import * as SecureStore from 'expo-secure-store';
-import * as ScreenOrientation from 'expo-screen-orientation';
-import { createAppContainer, createDrawerNavigator } from 'react-navigation';
-import { ApolloProvider } from 'react-apollo';
-import { ApolloClient } from 'apollo-client';
-import { createHttpLink } from 'apollo-link-http';
-import { setContext } from 'apollo-link-context';
 import { InMemoryCache } from 'apollo-cache-inmemory';
 import { persistCache } from 'apollo-cache-persist';
-import _reduce from 'lodash/reduce';
+import { ApolloClient } from 'apollo-client';
+import { setContext } from 'apollo-link-context';
+import { createHttpLink } from 'apollo-link-http';
+import * as ScreenOrientation from 'expo-screen-orientation';
+import * as SecureStore from 'expo-secure-store';
+import * as SplashScreen from 'expo-splash-screen';
 import _isEmpty from 'lodash/isEmpty';
+import _reduce from 'lodash/reduce';
+import React, { useEffect, useState } from 'react';
+import { ApolloProvider } from 'react-apollo';
+import { ActivityIndicator, AsyncStorage, StatusBar } from 'react-native';
+import { createAppContainer, createDrawerNavigator } from 'react-navigation';
 
 import { auth } from './auth';
+import { LoadingContainer } from './components';
 import { colors, consts, device, namespace, secrets, texts } from './config';
 import { graphqlFetchPolicy, storageHelper } from './helpers';
-import { getQuery, QUERY_TYPES } from './queries';
-import { NetworkProvider } from './NetworkProvider';
-import NetInfo from './NetInfo';
-import { OrientationProvider } from './OrientationProvider';
-import { SettingsProvider } from './SettingsProvider';
 import AppStackNavigator from './navigation/AppStackNavigator';
-import MainTabNavigator from './navigation/MainTabNavigator';
 import { CustomDrawerContentComponent } from './navigation/CustomDrawerContentComponent';
-import { LoadingContainer } from './components';
+import MainTabNavigator from './navigation/MainTabNavigator';
+import NetInfo from './NetInfo';
+import { NetworkProvider } from './NetworkProvider';
+import { OrientationProvider } from './OrientationProvider';
+import { getQuery, QUERY_TYPES } from './queries';
+import { SettingsProvider } from './SettingsProvider';
 
 const { LIST_TYPES } = consts;
 

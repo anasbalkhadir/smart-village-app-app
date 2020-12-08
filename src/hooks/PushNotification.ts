@@ -1,7 +1,7 @@
+import { Subscription } from '@unimodules/react-native-adapter';
+import * as Notifications from 'expo-notifications';
 import { useCallback, useEffect, useRef, useState } from 'react';
 import { AppState, AppStateStatus } from 'react-native';
-import * as Notifications from 'expo-notifications';
-import { Subscription } from '@unimodules/react-native-adapter';
 
 import { readFromStore } from '../helpers';
 import {

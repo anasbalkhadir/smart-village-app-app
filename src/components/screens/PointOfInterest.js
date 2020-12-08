@@ -1,23 +1,24 @@
+import _filter from 'lodash/filter';
 import PropTypes from 'prop-types';
 import React, { useContext } from 'react';
 import { View } from 'react-native';
-import _filter from 'lodash/filter';
 
 import { colors, consts, device, texts } from '../../config';
+import { matomoTrackingString } from '../../helpers';
+import { useMatomoTrackScreenView } from '../../hooks';
+import { location, locationIconAnchor } from '../../icons';
+import { OrientationContext } from '../../OrientationProvider';
 import { HtmlView } from '../HtmlView';
 import { Image } from '../Image';
+import { ImagesCarousel } from '../ImagesCarousel';
+import { WebViewMap } from '../map/WebViewMap';
 import { Title, TitleContainer, TitleShadow } from '../Title';
 import { Wrapper, WrapperWithOrientation } from '../Wrapper';
-import { PriceCard } from './PriceCard';
+
 import { InfoCard } from './InfoCard';
-import { OperatingCompanyInfo } from './OperatingCompanyInfo';
 import { OpeningTimesCard } from './OpeningTimesCard';
-import { ImagesCarousel } from '../ImagesCarousel';
-import { OrientationContext } from '../../OrientationProvider';
-import { useMatomoTrackScreenView } from '../../hooks';
-import { matomoTrackingString } from '../../helpers';
-import { WebViewMap } from '../map/WebViewMap';
-import { location, locationIconAnchor } from '../../icons';
+import { OperatingCompanyInfo } from './OperatingCompanyInfo';
+import { PriceCard } from './PriceCard';
 
 const { MATOMO_TRACKING } = consts;
 

@@ -1,7 +1,7 @@
 import * as SecureStore from 'expo-secure-store';
 
-import { device, secrets } from '../config';
 import * as appJson from '../../app.json';
+import { device, secrets } from '../config';
 
 const namespace = appJson.expo.slug as keyof typeof secrets;
 

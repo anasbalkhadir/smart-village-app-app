@@ -1,11 +1,11 @@
+import { useMatomo } from 'matomo-tracker-react-native';
 import PropTypes from 'prop-types';
 import React, { useContext, useEffect } from 'react';
 import { ActivityIndicator, StyleSheet, TouchableOpacity, View } from 'react-native';
 import { WebView } from 'react-native-webview';
-import { useMatomo } from 'matomo-tracker-react-native';
 
-import { colors, consts, normalize } from '../config';
 import { Icon, LoadingContainer, SafeAreaViewFlex, WrapperWithOrientation } from '../components';
+import { colors, consts, normalize } from '../config';
 import { arrowLeft } from '../icons';
 import { NetworkContext } from '../NetworkProvider';
 

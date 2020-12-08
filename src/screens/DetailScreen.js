@@ -1,5 +1,6 @@
 import PropTypes from 'prop-types';
 import React, { useContext, useEffect, useState } from 'react';
+import { Query } from 'react-apollo';
 import {
   ActivityIndicator,
   RefreshControl,
@@ -8,11 +9,8 @@ import {
   TouchableOpacity,
   View
 } from 'react-native';
-import { Query } from 'react-apollo';
 
-import { NetworkContext } from '../NetworkProvider';
 import { auth } from '../auth';
-import { colors, consts, device, normalize } from '../config';
 import {
   EventRecord,
   Icon,
@@ -23,10 +21,12 @@ import {
   Tour,
   WrapperRow
 } from '../components';
-import { getQuery, QUERY_TYPES } from '../queries';
-import { arrowLeft, share } from '../icons';
+import { colors, consts, device, normalize } from '../config';
 import { graphqlFetchPolicy, openShare } from '../helpers';
 import { useRefreshTime } from '../hooks';
+import { arrowLeft, share } from '../icons';
+import { NetworkContext } from '../NetworkProvider';
+import { getQuery, QUERY_TYPES } from '../queries';
 
 const getComponent = (query) => {
   const COMPONENTS = {

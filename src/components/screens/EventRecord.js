@@ -1,25 +1,26 @@
+import _filter from 'lodash/filter';
 import PropTypes from 'prop-types';
 import React, { useContext } from 'react';
 import { ActivityIndicator, StyleSheet, View } from 'react-native';
 import { WebView } from 'react-native-webview';
-import _filter from 'lodash/filter';
 
 import { colors, consts, device, normalize, texts } from '../../config';
+import { matomoTrackingString, trimNewLines } from '../../helpers';
+import { useMatomoTrackScreenView } from '../../hooks';
+import { OrientationContext } from '../../OrientationProvider';
 import { HtmlView } from '../HtmlView';
 import { Image } from '../Image';
+import { ImagesCarousel } from '../ImagesCarousel';
 import { LoadingContainer } from '../LoadingContainer';
 import { Logo } from '../Logo';
 import { Title, TitleContainer, TitleShadow } from '../Title';
 import { Touchable } from '../Touchable';
 import { Wrapper, WrapperHorizontal, WrapperWithOrientation } from '../Wrapper';
-import { PriceCard } from './PriceCard';
+
 import { InfoCard } from './InfoCard';
-import { OperatingCompanyInfo } from './OperatingCompanyInfo';
 import { OpeningTimesCard } from './OpeningTimesCard';
-import { ImagesCarousel } from '../ImagesCarousel';
-import { matomoTrackingString, trimNewLines } from '../../helpers';
-import { OrientationContext } from '../../OrientationProvider';
-import { useMatomoTrackScreenView } from '../../hooks';
+import { OperatingCompanyInfo } from './OperatingCompanyInfo';
+import { PriceCard } from './PriceCard';
 
 // necessary hacky way of implementing iframe in webview with correct zoom level
 // thx to: https://stackoverflow.com/a/55780430

@@ -1,12 +1,13 @@
 import PropTypes from 'prop-types';
 import React, { useContext, useEffect, useState } from 'react';
 import { ActivityIndicator, View } from 'react-native';
-import { CacheManager } from 'react-native-expo-image-cache';
 import { Image as RNEImage } from 'react-native-elements';
+import { CacheManager } from 'react-native-expo-image-cache';
 
 import { colors } from '../config';
 import { imageHeight, imageWidth } from '../helpers';
 import { SettingsContext } from '../SettingsProvider';
+
 import { ImageRights } from './ImageRights';
 
 export const Image = ({ source, style, PlaceholderContent }) => {

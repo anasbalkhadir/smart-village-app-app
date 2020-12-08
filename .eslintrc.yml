@@ -22,6 +22,7 @@ parserOptions:
 plugins:
   - react
   - react-native
+  - 'import'
   - '@typescript-eslint'
 rules:
   arrow-parens:
@@ -52,6 +53,12 @@ rules:
   semi:
     - error
     - always
+  import/order:
+    - error
+    - newlines-between: always
+      alphabetize:
+        order: asc
+        caseInsensitive: true
   react-native/no-unused-styles:
     - error
   react-native/no-inline-styles:
