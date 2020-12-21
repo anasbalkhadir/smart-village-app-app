@@ -34,13 +34,13 @@ export const InfoBox = styled(WrapperRow)`
   margin-bottom: ${normalize(5)}px;
 `;
 
-export const WrapperWithOrientation = ({children}) => {
+export const WrapperWithOrientation = ({children, style}) => {
   const {orientation, dimensions} = useContext(OrientationContext);
   const needLandscapeWrapper =
     orientation === 'landscape' || dimensions.width > consts.DIMENSIONS.FULL_SCREEN_MAX_WIDTH;
 
   if (needLandscapeWrapper) {
-    return <WrapperLandscape>{children}</WrapperLandscape>;
+    return <WrapperLandscape style={style} >{children}</WrapperLandscape>;
   }
 
   return children;
@@ -49,5 +49,6 @@ export const WrapperWithOrientation = ({children}) => {
 WrapperWithOrientation.displayName = 'WrapperWithOrientation';
 
 WrapperWithOrientation.propTypes = {
-  children: PropTypes.oneOfType([PropTypes.array, PropTypes.object]).isRequired
+  children: PropTypes.oneOfType([PropTypes.array, PropTypes.object]).isRequired,
+  style: PropTypes.object
 };

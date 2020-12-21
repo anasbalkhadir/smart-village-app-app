@@ -13,7 +13,7 @@ import {
   Icon,
   RegularText,
   SafeAreaViewFlex,
-  Wrapper,
+  WrapperWithOrientation,
   WrapperRow
 } from '../components';
 import { getKeyFromTypeAndCategory } from '../helpers';
@@ -66,11 +66,11 @@ export const BookmarkScreen = ({ navigation }) => {
 
   if (!bookmarks || getBookmarkCount(bookmarks) === 0) {
     return (
-      <Wrapper>
+      <WrapperWithOrientation style={styles.noBookmarksYet}>
         <RegularText>
           {texts.bookmarks.noBookmarksYet}
         </RegularText>
-      </Wrapper>
+      </WrapperWithOrientation>
     );
   }
 
@@ -104,6 +104,9 @@ const styles = StyleSheet.create({
     paddingLeft: normalize(7),
     paddingRight: normalize(14),
     paddingVertical: normalize(4)
+  },
+  noBookmarksYet: {
+    paddingVertical: normalize(14)
   }
 });
 
