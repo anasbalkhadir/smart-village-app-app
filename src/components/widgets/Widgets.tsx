@@ -2,14 +2,16 @@ import React from 'react';
 import { StyleSheet, View } from 'react-native';
 import { NavigationScreenProp } from 'react-navigation';
 
+import { ConstructionSiteWidget } from './ConstructionSiteWidget';
+
 type Props = {
   navigation: NavigationScreenProp<never>;
   widgets?: string[];
 };
 
-const EXISTING_WIDGETS: {
-  [key: string]: React.FC<{ navigation: NavigationScreenProp<never> }>;
-} = {};
+const EXISTING_WIDGETS: { [key: string]: React.FC<{ navigation: NavigationScreenProp<never> }> } = {
+  constructionSite: ConstructionSiteWidget
+};
 
 const getExistingWidgets = (widgets: Array<string>) => {
   const existingWidgets = widgets.map((widget) => EXISTING_WIDGETS[widget]);
